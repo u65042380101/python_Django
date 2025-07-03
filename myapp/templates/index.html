@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าเเรกของเว็บไซต์</title>
+</head>
+<body>
+    <h1>สวัสดี ,{{name}}</h1>
+    <h2>อายุของคุณคือ {{age}} ปี</h2>
+
+    {% if age >= 30 %}
+        <h3> คุณเป็นวัยผู้ใหญ่</h3>
+    {% else %}
+        <h3> คุณเป็นวัยรุ่น</h3>
+    {% endif %}
+    
+    <hr>
+    <a href="/">หน้าเเรกของเว็บไซต์</a>
+    <a href="/about">เกี่ยวกับเรา</a>
+    <a href="/form">เเบบฟอร์มบันทึกข้อมูล</a>
+    
+</body>
+</html> 
