@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกี่ยวกับเรา</title>
-</head>
-<body>
-    <h1 style="color: blueviolet;">เกี่ยวกับเรา</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, repellat id voluptate sunt natus autem similique omnis deleniti beatae dolore numquam illo quidem incidunt, in minima quasi ipsam ipsa laboriosam?
-    <hr>
-    <a href="/">หน้าเเรกของเว็บไซต์</a>
-    <a href="/about">เกี่ยวกับเรา</a>
-    <a href="/form">เเบบฟอร์มบันทึกข้อมูล</a>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}
+    <title>เกี่ยวกับเรา</title>
+{% endblock %}
+
+{% block content %}
+    <h1 style="color: purple;">เกี่ยวกับเรา</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur debitis optio vero similique. Porro consectetur doloribus molestias reiciendis? Nulla exercitationem hic praesentium dignissimos vitae animi fugit blanditiis eligendi quibusdam veniam.</p>
+
+{% endblock %}
