@@ -5,7 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    all_person = Person.objects.order_by('id')  # เรียงตามลำดับที่สร้าง (ไม่เปลี่ยนเมื่อแก้ไข)
+    all_person = Person.objects.order_by('id')  # เรียงตามลำดับที่สร้าง ( ไม่เปลี่ยนเมื่อแก้ไข )
     return render(request, 'index.html', {'all_person': all_person})
 
 def about(request):
