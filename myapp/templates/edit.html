@@ -1,24 +1,36 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>แบบฟอร์มเเก้ไขข้อมูล</title>
+    <title>แบบฟอร์มแก้ไขข้อมูล</title>
 {% endblock %}
 
 {% block content %}
-    <h1 class="text-center">แบบฟอร์มบันทึกข้อมูล</h1>
-    <form method="post">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="name">ชื่อ</label>
-            <input type="text" name="name" class="form-control"value="{{person.name}}">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">✏️ แบบฟอร์มแก้ไขข้อมูล</h3>
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">ชื่อ</label>
+                        <input type="text" name="name" id="name" class="form-control" 
+                               value="{{ person.name }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="age" class="form-label">อายุ</label>
+                        <input type="number" name="age" id="age" class="form-control" 
+                               value="{{ person.age }}" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-warning">🔁 อัปเดตข้อมูล</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="age">อายุ</label>
-            <input type="text" name="age" class="form-control" value="{{person.age}}">
-        </div>
-        <input type="submit" value="อัพเดตข้อมูล" class="btn btn-primary mt-2">
-    </form>
-
-
-
+    </div>
+</div>
 {% endblock %}

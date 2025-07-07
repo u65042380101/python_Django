@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}
-    <title>หน้าเเรกของเว็บไซต์</title>
+
+    หน้าเเรกของเว็บไซต์
+
 {% endblock %}
 
 {% block content %}
@@ -28,7 +30,7 @@
 
             {% for person in all_person %}
             <tr>
-                <th scope="row">{{person.id}}</th>
+                <th scope="row">{{forloop.counter}}</th>
                 <td>{{person.name}}</td>
                 <td>{{person.age}}</td>
                 <td>{{person.date}}</td>
